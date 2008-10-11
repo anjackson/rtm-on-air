@@ -1,0 +1,41 @@
+<html>
+	<head>
+        <title>remember the milk</title>
+        <link href="css/rtm-on-air.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Uncomment the following line to add introspection.  When running the application hit F12 to bring up the introspector -->
+        <!-- <script type="text/javascript" src="js/AIRIntrospector.js"></script> -->
+        
+        <!-- Uncomment the following line to use the AIR source viewer -->
+        <!-- <script type="text/javascript" src="js/AIRSourceViewer.js"></script> -->
+        
+        <!-- Uncomment the following line to use the AIR Localizer -->
+        <!-- <script type="text/javascript" src="js/AIRLocalizer.js"></script> -->
+        
+        <!-- Uncomment the following line to use the AIR Menu Builder -->
+        <!-- <script type="text/javascript" src="js/AIRMenuBuilder.js"></script> -->
+        
+        <script type="text/javascript" src="js/AIRAliases.js"></script>
+        <script type="text/javascript" src="js/WindowControl.js"></script>
+				
+        <script type="text/javascript">
+			
+			function openInBrowser(url) {
+				air.navigateToURL( new air.URLRequest(url)); 
+			}
+            
+        </script>
+	</head>
+
+    <body style="background-color: white;"  onLoad="initialize()">
+        <div id="topDragBar" style="text-align: center;">
+				<img src="icons/rtm_slogo.png"/>
+				<a href="#" onclick="openInBrowser('http://www.rememberthemilk.com/')"><img src="icons/rtm_logo_24.png"/></a>
+				</div>
+				
+				<iframe src="http://www.rememberthemilk.com/services/modules/googleig/" style="width:100%; height:420px; border: none;">
+					
+				</iframe>
+				
+    </body>
+</html>
