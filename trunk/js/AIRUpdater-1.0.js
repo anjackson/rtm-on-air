@@ -22,7 +22,7 @@ var AIRUpdater = function () {
 			<releasenotes>Added automatic update downloading feature.</releasenotes>
 		</application>
 	*/
-	var latestVersionCheckUrl = "http://www.myapp.com/versioning.xml";
+	var latestVersionCheckUrl = "http://rtm-on-air.googlecode.com/svn/trunk/server/update.xml";
 	var updateAvailable = null;
 	var updateAvailableDialog = null;
 	var releaseNotes = null;
@@ -32,7 +32,7 @@ var AIRUpdater = function () {
 		and ".air" extension will automatically be added; version taken 
 		from the XML value found in the latestVersionCheckUrl page
 	*/	
-	var updaterUrl = "http://myapp.googlecode.com/files/myapp-";
+	var updaterUrl = "http://rtm-on-air.googlecode.com/files/rtm-on-air-";
 	var stream = null;
 	var updateFile = null;
 	
@@ -51,7 +51,8 @@ var AIRUpdater = function () {
 		var XMLHttp = new XMLHttpRequest();
 		XMLHttp.onreadystatechange = function () {
 			if (XMLHttp.readyState === 4) {
-				var response = XMLHttp.responseXML;
+				//var response = XMLHttp.responseXML; // Google Code mime-mapping does not support this.
+				var response = new DOMParser().parseFromString(XMLHttp.responseText, "text/xml");
 				var releaseNotesNode = response.getElementsByTagName("releasenotes")[0];
 				/*
 					Adds a reference to a releaseNote for the latest version, 
@@ -82,6 +83,7 @@ var AIRUpdater = function () {
 				end user, and give them the option to start the update
 				The code below is just sample code:
 			*/
+			alert("New version "+latestVersion+": "+releaseNotesText);
 			
 			// Present release notes for the new version available
 			document.getElementById("release-notes").innerHTML = releaseNotesText;
@@ -148,4 +150,4 @@ var AIRUpdater = function () {
 		}
 	};
 }();
-window.onload = AIRUpdater.init;
+//window.onload = AIRUpdater.init;
