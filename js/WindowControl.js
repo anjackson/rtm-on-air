@@ -2,22 +2,6 @@
 	var maxButton;
 	var restoreButton;
 
-	function initialize(){
-		var topBar = document.getElementById("topDragBar");
-		topBar.addEventListener("mousedown",onMove,true);
-/*
- 		var bottomBar = document.getElementById("bottomDragBar");
-		bottomBar.addEventListener("mousedown",onMove,true);
-		var resizeGripper = document.getElementById("resizeGripper");
-		resizeGripper.addEventListener("mousedown",onResize,true);
-				
-		maxButton = document.getElementById("maximize");
-		restoreButton = document.getElementById("restore");
-	*/	
-		nativeWindow.addEventListener(air.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGE, 
-									  onDisplayStateChange);
-	}
-	
 	function onClose(){
 		var closing = new air.Event(air.Event.CLOSING, true, true);
 		window.nativeWindow.dispatchEvent(closing);

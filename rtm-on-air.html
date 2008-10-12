@@ -16,14 +16,36 @@
         <!-- <script type="text/javascript" src="js/AIRMenuBuilder.js"></script> -->
         
         <script type="text/javascript" src="js/AIRAliases.js"></script>
-        <script type="text/javascript" src="js/WindowControl.js"></script>
+				
+        <script type="text/javascript" src="js/AIRUpdater-1.0.js"></script>
+        
+				<script type="text/javascript" src="js/WindowControl.js"></script>
 				
         <script type="text/javascript">
 			
 			function openInBrowser(url) {
 				air.navigateToURL( new air.URLRequest(url)); 
 			}
-            
+			
+			function initialize(){
+				AIRUpdater.init();
+				
+				var topBar = document.getElementById("topDragBar");
+				topBar.addEventListener("mousedown",onMove,true);
+/*
+ 		var bottomBar = document.getElementById("bottomDragBar");
+		bottomBar.addEventListener("mousedown",onMove,true);
+		var resizeGripper = document.getElementById("resizeGripper");
+		resizeGripper.addEventListener("mousedown",onResize,true);
+				
+		maxButton = document.getElementById("maximize");
+		restoreButton = document.getElementById("restore");
+	*/	
+				nativeWindow.addEventListener(air.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGE, 
+									  onDisplayStateChange);
+		
+		}
+	
         </script>
 	</head>
 
