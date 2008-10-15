@@ -49,18 +49,19 @@
         </script>
 	</head>
 
-    <body style="background-color: white; border: 1px solid #0060bf;"  onLoad="initialize()">
-        <div id="topDragBar" style="text-align: center;">
+    <body onLoad="initialize()">
+        <div id="topDragBar">
 				<img src="icons/rtm_slogo.png"/>
-				<a href="#" onclick="openInBrowser('http://www.rememberthemilk.com/')"><img src="icons/rtm_logo_24.png"/></a>
 				</div>
 				<!-- iGoogle Gadget: http://www.rememberthemilk.com/services/modules/googleig/ -->
 				<!-- Netvibes version: http://www.rememberthemilk.com/services/modules/netvibes/ -->
 				<!-- iPhone version (Safari 3 only?): http://i.rememberthemilk.com/ -->
 				<!-- Generic mobile version: http://m.rememberthemilk.com/ -->
-				<iframe src="http://www.rememberthemilk.com/services/modules/googleig/" style="width:100%; height:420px; border: none;">
+				<iframe id="mainFrame" src="http://www.rememberthemilk.com/services/modules/googleig/">
 					
 				</iframe>
-				
+				<div id="bottomBar">
+				<a href="#" onclick="openInBrowser('http://www.rememberthemilk.com/')"><img src="icons/rtm_logo_24.png"/></a>
+				</div>
     </body>
 </html>
