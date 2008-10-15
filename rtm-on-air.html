@@ -30,8 +30,10 @@
 			function initialize(){
 				AIRUpdater.init();
 				
-				var topBar = document.getElementById("topDragBar");
+				var topBar = document.getElementById("header");
 				topBar.addEventListener("mousedown",onMove,true);
+				var bottomBar = document.getElementById("footer");
+				bottomBar.addEventListener("mousedown",onResize,true);
 /*
  		var bottomBar = document.getElementById("bottomDragBar");
 		bottomBar.addEventListener("mousedown",onMove,true);
@@ -50,18 +52,25 @@
 	</head>
 
     <body onLoad="initialize()">
+        <div id="header">
         <div id="topDragBar">
 				<img src="icons/rtm_slogo.png"/>
 				</div>
+  			</div>
+        
+        <div id="content">
+				<iframe src="http://www.rememberthemilk.com/services/modules/googleig/">
 				<!-- iGoogle Gadget: http://www.rememberthemilk.com/services/modules/googleig/ -->
 				<!-- Netvibes version: http://www.rememberthemilk.com/services/modules/netvibes/ -->
 				<!-- iPhone version (Safari 3 only?): http://i.rememberthemilk.com/ -->
 				<!-- Generic mobile version: http://m.rememberthemilk.com/ -->
-				<iframe id="mainFrame" src="http://www.rememberthemilk.com/services/modules/googleig/">
-					
 				</iframe>
+        </div>
+        
+				<div id="footer">
 				<div id="bottomBar">
 				<a href="#" onclick="openInBrowser('http://www.rememberthemilk.com/')"><img src="icons/rtm_logo_24.png"/></a>
+				</div>
 				</div>
     </body>
 </html>

@@ -61,7 +61,7 @@
 	}
 
 	var onResize = function(event){
-		nativeWindow.startResize(air.NativeWindowResize.BOTTOM_RIGHT);
+		nativeWindow.startResize(air.NativeWindowResize.BOTTOM);
 	}
 	
 	var Bridge = {};

@@ -83,7 +83,7 @@ var AIRUpdater = function () {
 				end user, and give them the option to start the update
 				The code below is just sample code:
 			*/
-			alert("New version "+latestVersion+": "+releaseNotesText);
+//			alert("New version "+latestVersion+": "+releaseNotesText);
 			
 			// Present release notes for the new version available
 			//document.getElementById("release-notes").innerHTML = releaseNotesText;
