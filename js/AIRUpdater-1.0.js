@@ -86,18 +86,18 @@ var AIRUpdater = function () {
 			alert("New version "+latestVersion+": "+releaseNotesText);
 			
 			// Present release notes for the new version available
-			document.getElementById("release-notes").innerHTML = releaseNotesText;
+			//document.getElementById("release-notes").innerHTML = releaseNotesText;
 			
 			// Add onclick event to start update button
-			document.getElementById("update-application").onclick = initUpdateApplication;
+			//document.getElementById("update-application").onclick = initUpdateApplication;
 			
 			// Add onclick event to cancel update button
-			document.getElementById("cancel-update").onclick = function () {
-				document.getElementById("update-available-dialog").style.display = "none";
-			};
+			//document.getElementById("cancel-update").onclick = function () {
+			//	document.getElementById("update-available-dialog").style.display = "none";
+			//};
 			
 			// Show the update dialog to the end user
-			document.getElementById("update-available-dialog").style.display = "block";
+			//document.getElementById("update-available-dialog").style.display = "block";
 		}
 	};
 	
