@@ -58,12 +58,46 @@ body {
   background: white;
   border-left: 2px solid #0060bf;
   border-right: 2px solid #0060bf;
+	z-index: 10;
+}
+
+#update-available-dialog {
+	position: absolute;
+	overflow: hidden;
+  background: white;
+  border: 2px solid #0060bf;
+	width: 80%;
+	height: 50%;
+	top: 25%;
+	left: 10%;
+	z-index: 100;
+	text-align: center;
+	font-size: small;
+	display: none;
+}
+#release-notes {
+	padding: 20px 4px;
+}
+#update-application{
+	display: inline;
+	padding: 4px;
+  border: 2px solid #0060bf;
+}
+#cancel-update {
+	display: inline;
+	padding: 4px;
+  border: 2px solid #0060bf;
+	opacity: 0.6;
+}
+#cancel-update:hover {
+	opacity: 1.0;
 }
 
 #content iframe {
 	height:100%;
 	width:100%;	
 	border: none;
+	z-index: 11;
 }
 
 

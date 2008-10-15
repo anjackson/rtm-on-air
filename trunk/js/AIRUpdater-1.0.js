@@ -32,7 +32,7 @@ var AIRUpdater = function () {
 		and ".air" extension will automatically be added; version taken 
 		from the XML value found in the latestVersionCheckUrl page
 	*/	
-	var updaterUrl = "http://rtm-on-air.googlecode.com/files/rtm-on-air-";
+	var updaterUrl = "http://rtm-on-air.googlecode.com/files/rtm-on-air_";
 	var stream = null;
 	var updateFile = null;
 	
@@ -83,21 +83,20 @@ var AIRUpdater = function () {
 				end user, and give them the option to start the update
 				The code below is just sample code:
 			*/
-//			alert("New version "+latestVersion+": "+releaseNotesText);
 			
 			// Present release notes for the new version available
-			//document.getElementById("release-notes").innerHTML = releaseNotesText;
+			document.getElementById("release-notes").innerHTML = "Verion "+latestVersion+": "+releaseNotesText;
 			
 			// Add onclick event to start update button
-			//document.getElementById("update-application").onclick = initUpdateApplication;
+			document.getElementById("update-application").onclick = initUpdateApplication;
 			
 			// Add onclick event to cancel update button
-			//document.getElementById("cancel-update").onclick = function () {
-			//	document.getElementById("update-available-dialog").style.display = "none";
-			//};
+			document.getElementById("cancel-update").onclick = function () {
+				document.getElementById("update-available-dialog").style.display = "none";
+			};
 			
 			// Show the update dialog to the end user
-			//document.getElementById("update-available-dialog").style.display = "block";
+			document.getElementById("update-available-dialog").style.display = "block";
 		}
 	};
 	
